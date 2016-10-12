@@ -1,15 +1,6 @@
-def fib():
-    a = 1
-    b = 1
-    while True:
-        yield a
-        a, b = b, a + b
+n = 5 # int(input("Fibonacci Sequence!!!! \n How many numbers?"))
+list1 = [1] if n > 0 else []
+for x in range(n-1):
+    list1.append(list1[x]+list1[-1])
 
-lim = int(input("How many numbers? "))
-print("\n")
-count = 0
-for num in fib():
-    print(num)
-    count += 1
-    if count >= lim:
-        break
+return list1
